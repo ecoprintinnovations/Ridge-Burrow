@@ -476,25 +476,23 @@
             </div>
           </div>
 
-          <div
-            class="mt-12 map-container bg-stone-200 rounded-lg overflow-hidden"
-          >
-            <!-- Map placeholder - in a real implementation you would embed a Google Map -->
+          <div class="mt-12 rounded-lg overflow-hidden">
             <div
-              class="w-full h-full flex items-center justify-center bg-green-50"
-            >
-              <div class="text-center p-6">
-                <i
-                  class="fas fa-map-marked-alt text-5xl text-green-700 mb-4"
-                ></i>
-                <h3 class="title-font text-xl font-bold text-green-800 mb-2">
-                  Cheshire Service Area
-                </h3>
-                <p class="text-stone-700">
-                  We cover all of Cheshire and surrounding areas
-                </p>
-              </div>
-            </div>
+              id="service-map"
+              aria-label="Interactive map showing our Cheshire service area"
+            ></div>
+            <noscript>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Cheshire%2C+UK"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="https://maps.googleapis.com/maps/api/staticmap?center=53.1934,-2.5215&zoom=9&size=600x300&key=YOUR_GOOGLE_MAPS_API_KEY"
+                  alt="Static map of Cheshire service area"
+                />
+              </a>
+            </noscript>
           </div>
         </div>
       </div>
@@ -1072,6 +1070,12 @@
       </div>
     </footer>
 
+    <script src="service-map.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initServiceMap"
+    ></script>
     <script>
       // Mobile menu toggle
       const menuBtn = document.getElementById("menu-btn");
