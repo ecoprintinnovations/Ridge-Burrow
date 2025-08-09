@@ -54,3 +54,6 @@ iframe {
     height: 300px;
   }
 }
+
+.testimonial-avatar { width: 64px; height: 64px; object-fit: cover; border-radius: 9999px; }
+@media (min-width: 768px){ .testimonial-avatar { width: 80px; height: 80px; } }
