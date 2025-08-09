@@ -401,6 +401,18 @@
         </h2>
 
         <div class="max-w-4xl mx-auto">
+          <div class="rounded-lg overflow-hidden mb-12">
+            <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9515.497847535037!2d-2.6802635!3d53.2870522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b6fd7a863cb7f%3A0x41c1fcba8f57960!2sKingsley%2C%20Frodsham!5e0!3m2!1sen!2suk!4v1723218200000!5m2!1sen!2suk" 
+  width="100%" 
+  height="400" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade"
+  class="w-full"></iframe>
+          </div>
+
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div
               class="bg-stone-50 p-4 rounded-lg border border-stone-200 text-center"
@@ -474,25 +486,6 @@
               <i class="fas fa-map-pin text-green-700 mb-2"></i>
               <p>Surrounding Areas</p>
             </div>
-          </div>
-
-          <div class="mt-12 rounded-lg overflow-hidden">
-            <div
-              id="service-map"
-              aria-label="Interactive map showing our Cheshire service area"
-            ></div>
-            <noscript>
-              <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Cheshire%2C+UK"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="https://maps.googleapis.com/maps/api/staticmap?center=53.1934,-2.5215&zoom=9&size=600x300&key=YOUR_GOOGLE_MAPS_API_KEY"
-                  alt="Static map of Cheshire service area"
-                />
-              </a>
-            </noscript>
           </div>
         </div>
       </div>
@@ -1070,12 +1063,6 @@
       </div>
     </footer>
 
-    <script src="service-map.js"></script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initServiceMap"
-    ></script>
     <script>
       // Mobile menu toggle
       const menuBtn = document.getElementById("menu-btn");
