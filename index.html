@@ -6,7 +6,14 @@
     <title>
       Ridge & Burrow | Professional Mole & Rodent Control in Cheshire
     </title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,7 +22,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-stone-50">
@@ -655,14 +661,16 @@
     </section>
 
     <script>
-      tns({
-        container: '.reviews-slider',
-        items: 1,
-        slideBy: 'page',
-        autoplay: true,
-        autoplayButtonOutput: false,
-        controls: false,
-        nav: true
+      document.addEventListener('DOMContentLoaded', () => {
+        tns({
+          container: '.reviews-slider',
+          items: 1,
+          slideBy: 'page',
+          autoplay: true,
+          autoplayButtonOutput: false,
+          controls: false,
+          nav: true
+        });
       });
     </script>
 
@@ -1077,6 +1085,8 @@
       </div>
     </footer>
 
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <script>
       // Mobile menu toggle
       const menuBtn = document.getElementById("menu-btn");
