@@ -83,7 +83,13 @@
           >
         </div>
         <div class="md:hidden">
-          <button id="menu-btn" class="text-green-900 focus:outline-none">
+          <button
+            id="menu-btn"
+            class="text-green-900 focus:outline-none"
+            aria-label="Toggle navigation"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
             <i class="fas fa-bars text-2xl"></i>
           </button>
         </div>
@@ -1155,6 +1161,8 @@
       const mobileMenu = document.getElementById("mobile-menu");
 
       menuBtn.addEventListener("click", () => {
+        const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", String(!expanded));
         mobileMenu.classList.toggle("hidden");
       });
 
@@ -1175,6 +1183,7 @@
             // Close mobile menu if open
             if (!mobileMenu.classList.contains("hidden")) {
               mobileMenu.classList.add("hidden");
+              menuBtn.setAttribute("aria-expanded", "false");
             }
           }
         });
