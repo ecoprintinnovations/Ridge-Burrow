@@ -61,13 +61,14 @@ iframe {
 @media (min-width: 768px){ .testimonial-avatar { width: 80px; height: 80px; } }
 
 /* Navigation logo sizing */
+
 .nav-logo {
-  height: 40px;
+  height: 80px;
 }
 
 @media (min-width: 768px) {
   .nav-logo {
-    height: 48px;
+    height: 96px;
   }
 }
 
