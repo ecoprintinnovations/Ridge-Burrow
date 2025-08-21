@@ -96,6 +96,23 @@ iframe {
   padding: clamp(1.25rem, 5vw, 4rem);
 }
 
+.section-grid {
+  display: grid;
+  gap: clamp(1rem, 2vw, 2.5rem);
+}
+
+@media (min-width: 1280px) {
+  .section-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1279px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .section-heading {
   font-size: clamp(1.875rem, 5vw, 2.25rem);
   line-height: 1.2;
