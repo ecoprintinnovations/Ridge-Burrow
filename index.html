@@ -1174,7 +1174,10 @@
         const isOpen = mobileMenu.classList.toggle("open");
         document.body.classList.toggle("menu-open", isOpen);
         menuBtn.setAttribute("aria-expanded", String(isOpen));
-        mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+        mobileMenu.setAttribute(
+          "aria-hidden",
+          isOpen ? "false" : "true"
+        );
       });
 
       // Close mobile menu when a link is clicked
