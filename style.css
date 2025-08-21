@@ -15,17 +15,27 @@ body {
   background-position: center;
 }
 
-.service-card:hover {
+.card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-card {
-  transition: all 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: scale(1.02);
+.card > img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .gallery-image {
