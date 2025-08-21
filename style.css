@@ -85,3 +85,14 @@ iframe {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   padding: clamp(1.25rem, 5vw, 4rem);
 }
+
+.section-heading {
+  font-size: clamp(1.875rem, 5vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.section-lead {
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
