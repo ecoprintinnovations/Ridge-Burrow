@@ -97,7 +97,7 @@
         </div>
       </div>
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
+      <div id="mobile-menu" class="md:hidden bg-white px-4 pb-4" aria-hidden="true">
         <a
           href="#services"
           class="block py-2 text-green-900 hover:text-green-700"
@@ -1171,9 +1171,20 @@
       const mobileMenu = document.getElementById("mobile-menu");
 
       menuBtn.addEventListener("click", () => {
-        const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-        menuBtn.setAttribute("aria-expanded", String(!expanded));
-        mobileMenu.classList.toggle("hidden");
+        const isOpen = mobileMenu.classList.toggle("open");
+        document.body.classList.toggle("menu-open", isOpen);
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+        mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+      });
+
+      // Close mobile menu when a link is clicked
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          document.body.classList.remove("menu-open");
+          menuBtn.setAttribute("aria-expanded", "false");
+          mobileMenu.setAttribute("aria-hidden", "true");
+        });
       });
 
       // Smooth scrolling for anchor links
@@ -1189,12 +1200,6 @@
             targetElement.scrollIntoView({
               behavior: "smooth",
             });
-
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains("hidden")) {
-              mobileMenu.classList.add("hidden");
-              menuBtn.setAttribute("aria-expanded", "false");
-            }
           }
         });
       });
