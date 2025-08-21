@@ -148,3 +148,18 @@ iframe {
   outline-offset: 2px;
 }
 
+/* Mobile menu transition and body scroll lock */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#mobile-menu.open {
+  max-height: 500px;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
