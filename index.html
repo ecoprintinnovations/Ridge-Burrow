@@ -1190,13 +1190,29 @@
         });
       });
 
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      // Smooth scrolling for mobile menu links
+      mobileMenu.querySelectorAll("a").forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (!targetId || targetId === "#") return;
           e.preventDefault();
 
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Smooth scrolling for other in-page anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        if (mobileMenu.contains(anchor)) return;
+        anchor.addEventListener("click", function (e) {
           const targetId = this.getAttribute("href");
-          if (targetId === "#") return;
+          if (!targetId || targetId === "#") return;
+          e.preventDefault();
 
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
