@@ -8,12 +8,9 @@ A static marketing site for Ridge & Burrow pest control in Cheshire. The page us
 
 Open `index.html` in a browser to view the site.
 
-## Contact Form Setup
+## Contact Form
 
-The "Request a Free Survey" form submits to [Formspree](https://formspree.io).
-
-1. Replace the placeholder form ID (`yournewid`) in `index.html` with the ID from your Formspree dashboard.
-2. Optionally configure email forwarding or integrations in your Formspree account.
-3. Test by submitting the form on the site; Formspree will email submissions to the address you specify.
-
-No additional backend is required for basic email forwarding.
+The "Request a Free Survey" form posts to [FormSubmit](https://formsubmit.co) and
+sends submissions directly to `chadsuckley1@gmail.com`. The form includes an
+automatic reply so users receive confirmation after submitting. To change the
+recipient or autoresponse, update the `form` element in `index.html`.
