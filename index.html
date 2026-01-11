@@ -44,20 +44,27 @@
   </head>
   <body class="bg-stone-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-      <div
-        class="container mx-auto px-4 py-3 flex justify-between items-center"
-      >
-        <div class="flex items-center">
-          <a href="#" class="flex items-center">
+    <nav class="bg-white shadow-md sticky top-0 z-50 site-header">
+      <div class="container mx-auto px-4 py-3 header-inner">
+        <div class="header-brand">
+          <a href="#" class="brand-logo">
             <img
               src="Images/ridge_burrow_logo.png"
               alt="Ridge & Burrow logo"
-              class="nav-logo h-20 md:h-24 w-auto"
+              class="nav-logo w-auto"
             />
           </a>
+          <div class="brand-copy">
+            <span class="brand-name">Ridge &amp; Burrow</span>
+            <span class="brand-positioning">
+              Engineering-led 3D printing for UK businesses
+            </span>
+            <span class="brand-trust">
+              UK-based • Fast turnaround • Engineering support
+            </span>
+          </div>
         </div>
-        <div class="hidden md:flex space-x-8">
+        <div class="hidden md:flex space-x-8 header-nav">
           <a
             href="#services"
             class="text-green-900 hover:text-green-700 transition"
@@ -84,7 +91,8 @@
             >Contact</a
           >
         </div>
-        <div class="md:hidden">
+        <div class="header-actions">
+          <a href="#contact" class="header-cta">Submit a brief</a>
           <button
             id="menu-btn"
             class="text-green-900 focus:outline-none"
@@ -134,18 +142,20 @@
     >
       <div class="container mx-auto px-4">
         <h1 class="title-font text-4xl md:text-6xl font-bold mb-4">
-          Welcome to Ridge & Burrow
+          Engineering-led 3D printing for production, protection &amp; tooling
         </h1>
-        <p class="text-xl md:text-2xl mb-8">
-          Trusted Mole and Rodent Control Across Cheshire
+        <p class="text-xl md:text-2xl mb-6">
+          Damaged components. Slow prototypes. Awkward assemblies. Short runs
+          that don’t justify tooling.
         </p>
-        <a
-          href="#contact"
-          class="btn-primary"
-          role="button"
-        >
-          Request a Free Survey
-        </a>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary" role="button">
+            Submit a brief → get a fast feasibility response
+          </a>
+          <a href="#services" class="btn-secondary" role="button">
+            View B2B solutions
+          </a>
+        </div>
       </div>
     </section>
 
