@@ -8,6 +8,7 @@ body {
 }
 
 .hero-image {
+  --hero-image-url: url("Images/ridge_burrow_banner.png");
   position: relative;
   overflow: hidden;
   background-color: #a84719;
@@ -18,7 +19,7 @@ body {
       rgba(173, 75, 21, 0.56) 45%,
       rgba(213, 128, 61, 0.28) 100%
     ),
-    url("Images/ridge_burrow_banner.png");
+    var(--hero-image-url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
